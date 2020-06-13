@@ -1,5 +1,4 @@
 import random
-import time
 import os
 
 Clear = lambda: os.system("cls")
@@ -181,7 +180,6 @@ else:
     Current4dot1 = random.choice(Stage4Obs["4.1"])
     Current4dot2 = random.choice(Stage4Obs["4.2"])
     Current4dot3 = random.choice(Stage4Obs["4.3"])
-    print(runners)
 
     input("Press Enter to Continue")
     Clear()
@@ -288,13 +286,12 @@ else:
                                         Cleared.append(Run)
                                         MovingOn.append(Current_Runner)
 
-    print("These People Cleared Stage 1")
+    print("{} People Cleared Stage 1. These People Cleared".format(len(MovingOn)))
     print(", ".join(MovingOn))
     print()
-    print("These People Failed")
+    print("{} People Failed Stage 1. These People Failed".format(len(Failed)))
     print(", ".join(Failed))
     print()
-    print(MovingOn)
     runners.clear()
     input("Press Enter to Continue")
     Clear()
@@ -382,13 +379,12 @@ else:
                                 Run = f"{Current_Runner} Cleared Stage 2"
                                 Cleared.append(Run)
                                 MovingOn.append(Current_Runner)
-    print("These People Cleared Stage 2")
+    print("{} People Cleared Stage 2. These People Cleared".format(len(MovingOn)))
     print(", ".join(MovingOn))
     print()
-    print("These People Failed")
+    print("{} People Failed Stage 2. These People Failed".format(len(Failed)))
     print(", ".join(Failed))
     print()
-    print(MovingOn)
     runners.clear()
     input("Press Enter to Continue")
     Clear()
@@ -464,13 +460,12 @@ else:
                                         Run = f"{Current_Runner} Cleared Stage 1"
                                         Cleared.append(Run)
                                         MovingOn.append(Current_Runner)
-    print("These People Cleared Stage 3")
+    print("{} People Cleared Stage 3. These People Cleared".format(len(MovingOn)))
     print(", ".join(MovingOn))
     print()
-    print("These People Failed")
+    print("{} People Failed Stage 3. These People Failed".format(len(Failed)))
     print(", ".join(Failed))
     print()
-    print(MovingOn)
     runners.clear()
     input("Press Enter to Continue")
     Clear()
@@ -508,9 +503,9 @@ else:
                     Run = f"{Current_Runner} Achieved Total Victory"
                     Cleared.append(Run)
                     MovingOn.append(Current_Runner)
-    print("These People Achieved Total Victory")
+    print("{} People Achieved Total Victory. These People Achieved Total Victory".format(len(MovingOn)))
     print(", ".join(MovingOn))
     print()
-    print("These People Failed")
+    print("{} People Failed Stage 4. These People Failed".format(len(Failed)))
     print(", ".join(Failed))
     input("Press Enter to quit")
